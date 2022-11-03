@@ -13,7 +13,12 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "typeorm": "ts-node -r dotenv/config ./node_modules/typeorm/cli.js -d data.source.js",
+    "migration:create": "nest build && yarn typeorm-ts-node-esm migration:create",
+    "migration:run": "yarn build && yarn typeorm migration:run",
+    "migration:revert": "yarn build && yarn typeorm migration:revert",
+    "migration:gen": "yarn build && yarn typeorm migration:generate"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",

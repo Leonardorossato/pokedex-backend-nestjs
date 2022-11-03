@@ -11,7 +11,7 @@ module.exports.PostgresSource = new DataSource({
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     entities: ['./dist/**/**.entity.js'],
-    migrations: ['./dist/migrations/**.js'],
+    migrations: ['./dist/migrations/database/**.js'],
     synchronize: false,
     logging: 'all',
     migrationsRun: true,

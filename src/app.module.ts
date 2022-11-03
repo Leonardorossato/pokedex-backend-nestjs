@@ -7,6 +7,13 @@ import { GymLidersModule } from './gym-liders/gym-liders.module';
 import { LeagueModule } from './league/league.module';
 
 @Module({
-  imports: [TrainersModule, PokemonsModule, AuthModule, GymModule, GymLidersModule, LeagueModule],
+  imports: [
+    TrainersModule,
+    PokemonsModule,
+    AuthModule,
+    GymModule,
+    GymLidersModule,
+    LeagueModule,
+  ],
 })
 export class AppModule {}

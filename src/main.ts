@@ -4,7 +4,7 @@ import { DocumentBuilder } from '@nestjs/swagger';
 import { SwaggerModule } from '@nestjs/swagger/dist';
 import { json } from 'express';
 import { AppModule } from './app.module';
-import PostgresSource from './../orm.config.js'
+import PostgresSource from './../orm.config.js';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

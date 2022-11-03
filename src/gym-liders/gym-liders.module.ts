@@ -4,6 +4,6 @@ import { GymLidersController } from './gym-liders.controller';
 
 @Module({
   controllers: [GymLidersController],
-  providers: [GymLidersService]
+  providers: [GymLidersService],
 })
 export class GymLidersModule {}

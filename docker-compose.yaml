@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: pokedex-backend-nestjs
+    image: postgres
+    environment:
+      POSTGRES_DB: pokedex-backend-nestjs
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456789
+    ports:
+      - '5433:5432'
+    restart: unless-stopped

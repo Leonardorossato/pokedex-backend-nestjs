@@ -12,7 +12,7 @@ async function bootstrap() {
   app.use(json({ limit: '50mb' }));
   const options = new DocumentBuilder()
     .addBearerAuth()
-    .setTitle('Spotify Backend Clone in NestJs')
+    .setTitle('Pokedex Backend Clone in NestJs')
     .setDescription('Rotas da aplicação do back-end')
     .setVersion('1.0')
     .build();

@@ -9,5 +9,5 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123456789
     ports:
-      - '5433:5432'
+      - '5434:5432'
     restart: unless-stopped

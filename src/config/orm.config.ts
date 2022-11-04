@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {
   TypeOrmModuleAsyncOptions,
   TypeOrmModuleOptions,
@@ -13,11 +14,10 @@ export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
       entities: ['./dist/**/**.entity.js'],
-      migrations: ['./dist/migrations/databse/**.js'],
+      migrations: ['./dist/migrations/**.js'],
       synchronize: false,
       logging: 'all',
       migrationsRun: true,
     };
   },
-  imports: undefined,
 };

@@ -39,7 +39,7 @@ export class TrainersService {
 
   async createTrainer(dto: CreateTrainerDTO) {
     try {
-      const trainer = this.trainerRepository.create(dto);
+      const trainer = this.trainerRepository.save(dto);
       return trainer;
     } catch (error) {
       throw new HttpException('Erro to create trainer', HttpStatus.BAD_REQUEST);

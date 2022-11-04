@@ -5,6 +5,9 @@ import { TrainersModule } from '../trainers/trainers.module';
 import { PassportModule } from '@nestjs/passport';
 import { ConfigService, ConfigModule } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
+import { LocalAuthGuard } from './guards/local.guard';
+import { JwtStrategy } from './strategy/jwt.strategy';
+import { CheckPassword } from './middleware/check.middleware.pass';
 @Module({
   imports: [
     TrainersModule,
@@ -22,6 +25,7 @@ import { JwtModule } from '@nestjs/jwt';
     }),
   ],
   controllers: [AuthController],
-  providers: [AuthService],
+  providers: [AuthService, LocalAuthGuard, JwtStrategy, CheckPassword],
+  exports: [AuthService],
 })
 export class AuthModule {}

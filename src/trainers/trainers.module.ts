@@ -9,5 +9,6 @@ import { CheckPassword } from '../auth/middleware/check.middleware.pass';
   imports: [TypeOrmModule.forFeature([Trainer])],
   controllers: [TrainersController],
   providers: [TrainersService, CheckPassword],
+  exports: [TrainersService],
 })
 export class TrainersModule {}

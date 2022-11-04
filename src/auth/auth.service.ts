@@ -23,9 +23,8 @@ export class AuthService {
   ) {}
 
   async loginCredentials(dto: AuthLoginDTO): Promise<any> {
-    let user: any;
     try {
-      user = await this.trainerService.findOneByEmail({
+      const user = await this.trainerService.findOneByEmail({
         email: dto.email,
         password: dto.password,
       });

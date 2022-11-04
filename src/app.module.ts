@@ -5,9 +5,9 @@ import { AuthModule } from './auth/auth.module';
 import { GymModule } from './gym/gym.module';
 import { GymLidersModule } from './gym-liders/gym-liders.module';
 import { LeagueModule } from './league/league.module';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmAsyncConfig } from './config/orm.config';
 import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import 'reflect-metadata';
 @Module({
   imports: [

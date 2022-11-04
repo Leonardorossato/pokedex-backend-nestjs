@@ -5,18 +5,18 @@ export class CreateTrainerDTO {
   @ApiProperty({ nullable: false, minLength: 3, maxLength: 200 })
   @MinLength(3)
   @IsString()
-  @MaxLength(200)
+  @MaxLength(256)
   name: string;
 
   @ApiProperty({ nullable: false, minLength: 3, maxLength: 200 })
   @MinLength(3)
   @IsString()
-  @MaxLength(200)
+  @MaxLength(256)
   email: string;
 
   @ApiProperty({ nullable: false, minLength: 3, maxLength: 200 })
   @MinLength(3)
   @IsString()
-  @MaxLength(200)
+  @MaxLength(256)
   password: string;
 }

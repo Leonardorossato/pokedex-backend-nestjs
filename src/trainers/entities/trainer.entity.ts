@@ -5,12 +5,12 @@ export class Trainer {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ nullable: false, length: 200, type: 'varchar' })
+  @Column({ nullable: false, length: 256, type: 'varchar' })
   name: string;
 
-  @Column({ nullable: false, length: 200, type: 'varchar', unique: true })
+  @Column({ nullable: false, length: 256, type: 'varchar', unique: true })
   email: string;
 
-  @Column({ nullable: false, length: 200, type: 'varchar' })
+  @Column({ nullable: false, length: 256, type: 'varchar' })
   password: string;
 }

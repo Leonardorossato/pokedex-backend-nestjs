@@ -6,13 +6,13 @@ export class AuthLoginDTO {
   @ApiProperty()
   @IsString()
   @MinLength(3)
-  @MaxLength(200)
+  @MaxLength(256)
   @IsEmail()
   email: string;
 
   @ApiProperty()
   @IsString()
   @MinLength(3)
-  @MaxLength(200)
+  @MaxLength(256)
   password: string;
 }

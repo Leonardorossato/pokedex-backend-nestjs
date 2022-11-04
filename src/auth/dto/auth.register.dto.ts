@@ -12,19 +12,19 @@ export class RegisterAuthDTO {
   @IsNotEmpty()
   @ApiProperty({ nullable: false, type: String })
   @MinLength(3)
-  @MaxLength(200)
+  @MaxLength(256)
   name: string;
 
   @IsEmail({}, { message: 'Email must be valid' })
   @IsString()
   @MinLength(3)
-  @MaxLength(200)
+  @MaxLength(256)
   @ApiProperty({ nullable: false, type: String })
   email: string;
 
   @IsNotEmpty()
   @MinLength(3)
-  @MaxLength(200)
+  @MaxLength(256)
   @ApiProperty({ nullable: false, type: String })
   password: string;
 }
